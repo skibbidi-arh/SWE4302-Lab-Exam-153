@@ -1,0 +1,36 @@
+1. InventorySystem class: large class/ god class
+
+reason: class contains nested classes like `Product` and `Order`, as well as
+ business logic (e.g., `addProduct`, `processOrder`, `GenerateInventoryReport`).
+
+
+
+2.Tight coupling:
+inventorySystem depends  on globalInventoryData on a high scale. this violates lose coupling.
+
+3.Class inventorySystem:
+ line 84 to 93 : Magic numbers
+
+
+
+4.  Class inventorySystem:
+line 78 to 98 : Switch case
+
+
+5. glass globalInventoryData
+,reportScheduler,inventorySystem :
+ naming convention in violated.
+Classes should start with uppercase letters.
+
+6. class inventorySystem:
+line 104 to 130: Repeated code
+
+calculation should be done using an interface method or by reusng a single method
+
+
+
+
+
+
+
+
