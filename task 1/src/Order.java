@@ -24,5 +24,39 @@ public class Order {
         items.add(new OrderItem(topping.getName(), quantity, topping.getPrice()));
     }
 
+    public void setContainer(String containerType) {
+        if (containerType.equalsIgnoreCase("waffle cone")) {
+            this.containerPrice = 5.00;
+        } else {
+            this.containerPrice = 0.00;
+        }
+    }
+    public double calculateSubtotal() {
 
+        return items.stream().mapToDouble(OrderItem::getTotalPrice).sum() + containerPrice;
+    }
+
+
+    public List<OrderItem> getItems() {
+        return items;
+    }
+
+
+
+    public double getContainerPrice() {
+
+        return containerPrice;
+
+    }
+
+
+    public double calculateTax() {
+
+        return calculateSubtotal() * TAX_RATE;
+    }
+
+
+    public double calculateTotal() {
+        return calculateSubtotal() + calculateTax();
+    }
 }

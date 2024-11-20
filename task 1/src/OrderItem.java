@@ -15,6 +15,11 @@ public class OrderItem {
 
     }
 
+    @Override
+    public String toString() {
+        return name + " - " + quantity + " x $" + String.format("%.2f", unitPrice) + ": $" + String.format("%.2f", getTotalPrice());
+    }
+
 
 
 
