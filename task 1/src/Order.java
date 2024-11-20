@@ -11,14 +11,17 @@ public class Order {
         this.items = new ArrayList<>();
         this.containerPrice = 0.0;
     }
+    public Order()
+    {
+        this.items = new ArrayList<>();
+    }
+
 
 
 
     public void addFlavor(IceCreamFlavor flavor,int quantity) {
 
        items.add(new OrderItem(flavor.getName(),quantity, flavor.getPricePerScoop()));
-
-
 
     }
 

@@ -28,6 +28,10 @@ line 104 to 130: Repeated code
 calculation should be done using an interface method or by reusng a single method
 
 
+7. class reportScheduler:
+Dead class
+
+
 
 
 

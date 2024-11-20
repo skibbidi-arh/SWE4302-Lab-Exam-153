@@ -3,8 +3,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class IceCreamShop {
+    List<OrderItem> items = new ArrayList<OrderItem>();
     public  void Shop() throws IOException{
-        List<OrderItem> items = new ArrayList<OrderItem>();
+
 
         IceCreamFlavor mintChocolateChip = new IceCreamFlavor("Mint Chocolate Chip", 2.80);
         IceCreamFlavor chocolateFudge = new IceCreamFlavor("Chocolate Fudge", 3.00);
